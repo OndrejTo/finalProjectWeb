@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="node_modules/bootswatch/dist/litera/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="node_modules/fontawesome-free/css/all.min.css"
+    />
+    <style>
+        .dropdown-item:hover 
+      {
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="index.html">Van Gogh</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Díla</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Historie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="login.html">Přihlásit se</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="register.html"
+                  >Zaregistrovat se</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Kontakt
+                </a>
+                <ul class="dropdown-menu bg-dark dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item text-white" href="#">Formulář</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white" href="#"
+                      >Another action</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white" href="#"
+                      >Something else here</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">Přihlášení</h2>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Uživatelské jméno</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Zadejte jméno" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Heslo</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Zadejte heslo" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-5">Přihlásit se</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</html>
