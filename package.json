@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootswatch": "^5.3.3",
-    "fontawesome-free": "^1.0.4"
+    "fontawesome-free": "^1.0.4",
+    "tinymce": "^7.1.2"
   }
 }
