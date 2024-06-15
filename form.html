@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontaktní formulář</title> </script>
+    <title>Kontaktní formulář</title>
     <link rel="stylesheet" type="text/css" href="node_modules/bootswatch/dist/litera/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="node_modules/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/multiple-select/dist/multiple-select.min.css">
     <script src="node_modules/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/multiple-select/dist/multiple-select.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(function () {
+        $('select').multipleSelect()
+      })
+    </script>
     <style>
       .dropdown-item:hover 
       {
@@ -24,9 +33,9 @@
 </head>
 <body>
     <!-- NAVBAR-->
-    <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg bg-black sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="index.html">Van Gogh</a>
+        <a class="navbar-brand text-white" href="index.html"><i class="fa fa-solid fa-paint-brush me-2"></i>Van Gogh</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -45,10 +54,11 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link text-white" href="works.html">Díla</a>
+              <a class="nav-link text-white" href="works.html"><i class="fa fa-brush me-lg-2 me-1"></i>Díla</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="login.html">Přihlásit se</a>
+              <a class="nav-link text-white" href="login.html">
+                Přihlásit se</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="register.html"
@@ -63,7 +73,8 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Kontakt
+              <i class="fa fa-phone"></i>
+              Kontakt
               </a>
               <ul class="dropdown-menu bg-dark dropdown-menu-end">
                 <li>
@@ -91,12 +102,19 @@
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Vložte email" name="email">
             </div>
+            <!-- Multiple Select -->
+            <label for="text" class="form-label">Kategorie dotazu:</label>
+            <br>
+    <select multiple>
+      <option value="1">Pomoc</option>
+      <option value="2">Komentář</option>
+      <option value="3">Nápad pro stránku</option>
+    </select>
             <div class="mb-3 mt-3">
                 <textarea  rows="5" id="mytextarea" placeholder="Zde můžete napsat poznámku"></textarea>
             </div>
             <button type="submit" class="btn btn-primary mb-5">Odeslat</button>
         </form>
-      
     </div>
 </body>
 </html>
